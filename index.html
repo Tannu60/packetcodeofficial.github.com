@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+
+  <title>Assignment</title>
+</head>
+<body>
+
+  <!-- header & filter section -->
+  <div id="header">
+ 
+   <h3 id="heading">
+      All Invoices
+   </h3>
+  
+        <div>
+         <div>
+            <label class="label">Begin Date</label>
+            <label class="label">End Date</label>
+            <label class="label">Client</label>
+            <label class="label">Status</label>
+          </div>
+
+        <div id="btn">
+          <input type="date" value='2019-11-05' class="btn btn-primary ">
+          <input type="date" value='2019-12-12' class="btn btn-danger ">
+       
+
+          <select class="form-select "style="width: 150px ; background-color:rgb(201, 118, 217)">
+            <option selected>Any</option>
+            <option value="1">In-State</option>
+            <option value="2">Out-State</option>
+          </select>
+          
+          <select  id="mylist" onchange="myFunction()" id='choice' class="form-select "style="width: 150px; background-color:rgb(217, 160, 118)">
+            <option selected>Any</option>
+            <option value="1">Draft</option>
+            <option value="2">Paid</option>
+            <option value="3">Partial-paid</option>
+          </select>
+        </div>
+
+          <p>*This data has been shown according to your given information</p>
+
+        </div>
+
+  <!-- table -->
+  <table id="myTable" id='table' class="table">
+    <thead>
+      <tr>
+        <th data-column="invoice_id" data-order="desc">Invoice id. &#9650</th>
+        <th data-column="client_name" data-order="desc">Client name &#9650</th>
+        <th data-column="client_type" data-order="desc">Client type &#9650</th>
+        <th data-column="date" data-order="desc">Date &#9650</th>
+        <th data-column="due_date" data-order="desc">Due Date &#9650</th>
+        <th data-column="total" data-order="desc">Total &#9650</th>
+        <th data-column="balance" data-order="desc">Balance &#9650</th>
+        <th data-column="status" data-order="desc">Status &#9650</th>     
+      </tr>
+    </thead>
+    <tbody id="mytable">
+      
+    </tbody>
+  </table>
+
+
+
+  <script src="script.js">  </script>
+
+</body>
+</html>
